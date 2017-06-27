@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./js/jquery-1.12.2.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        *{ margin:0px; padding:0px;}
+        /*  ======================第一个菜单的样式========================  */  
+       .top-nav 
+       {
+           width:960px;
+           margin:0 auto;
+           list-style:none; 
+           border-bottom:5px solid #FF5500; 
+           overflow:auto; /*清除子元素的浮动*/
+       }
+       .top-nav li
+       { 
+           float:left;  
+           margin-right:3px;
+       }
+       .top-nav li a 
+       { 
+           display:block; 
+           width:100px; 
+           line-height:40px;
+           background-color:#ccc;
+           text-decoration:none; 
+           color:#000; 
+           text-align:center;
+        }
+       .top-nav li a span 
+       {
+           display:none;
+       }
+       .top-nav li a:hover 
+       { 
+           margin-top:-40px; /*获得焦点时span中的英文向上移动*/
+       } 
+       .top-nav li a:hover span 
+       { 
+           display:block; 
+           background-color:#FF5500; 
+           color:#fff;
+       }   
+       
+       /*  ============================第二个菜单的样式 =========================== */
+       
+       .middle-nav /*菜单的总体样式*/
+       { 
+           width:960px; /*宽度960px*/
+           margin: 20px auto; /*水平居中*/
+           border:1px solid #222; /*设置边框为深灰黑色*/
+           background-image:linear-gradient(#444,#111); /*线性渐变，从深灰色(#444)到深灰黑色(#111)*/
+           border-radius:6px; /*圆角边框6px*/
+           -moz-border-radius:6px;/*Firefox*/
+           -webkit-border-radius:6px;/*Chrome, Safari*/
+           -o-border-radius:6px;/*Opera*/
+           -ms-border-radius:6px;/*IE*/
+           box-shadow:0 1px 1px #777; /*盒子阴影，水平向右偏移0像素，垂直向下偏移1像素，模糊度1像素，颜色#777*/
+           -moz-box-shadow:0 1px 1px #777; /*Firefox*/
+           -webkit-box-shadow:0 1px 1px #777;/*Chrome, Safari*/
+           -o-box-shadow:0 1px 1px #777;/*Opera*/
+           -ms-box-shadow:0 1px 1px #777;/*IE*/
+           padding:0;/*无内边距*/
+           list-style:none;/*去除无序列表中的圆点*/
+        } 
+        .middle-nav:after /*菜单之后*/
+        {
+            content:""; /*必须给元素的后加上一个空值*/
+            display:block; /*以块元素显示*/
+            clear:both; /*清除两边的浮动*/
+        }
+        .middle-nav > li /*一级菜单的菜单项*/
+        {
+           float:left; /*左浮动，变为横向显示*/
+           border-right:1px solid #222;  /*菜单项之间的间隔线*/   
+           box-shadow:1px 0 0 #444; /*盒子阴影，水平向右偏移1像素，垂直向下偏移0像素，不模糊，颜色#444*/
+           -moz-box-shadow:1px 0 0 #444; /*Firefox*/
+           -webkit-box-shadow:1px 0 0 #444;/*Chrome, Safari*/
+           -o-box-shadow:1px 0 0 #444;/*Opera*/
+           -ms-box-shadow:1px 0 0 #444;/*IE*/
+           position:relative; /*相对定位，用于设置二级菜单的位置*/
+        }
+        .middle-nav li a /*菜单项的超级连接*/
+        {
+          float:left; /*左浮动*/
+          padding:12px 30px; /*上下内边距为12px，左右内边距为30px*/
+          text-decoration:none;/*无下划线*/
+          color:#999;  /*颜色为灰色#999*/
+          font:bold 12px; /*设置字体*/
+          text-shadow: 0 1px 0 #000;/*盒子阴影，水平向右偏移0像素，垂直向下偏移1像素，不模糊，颜色黑色*/
+          -moz-text-shadow: 0 1px 0 #000;
+          -webkit-text-shadow: 0 1px 0 #000;
+          -o-text-shadow: 0 1px 0 #000;
+          -ms-text-shadow: 0 1px 0 #000;
+        }
+        .middle-nav li a:hover /*点击一级菜单项超链接*/
+        {
+           color : #fafafa;  /*设置字体颜色*/
+        }
+        .middle-nav li:hover > ul /*点击一级菜单时，二级菜单的样式，不包括三级菜单*/
+        {
+            visibility:visible; /*设置二级菜单可见*/
+            opacity:1;/*完全不透明（由于下面设置了透明）*/
+        }
+        .middle-nav ul /*二级菜单的总体样式*/
+        {
+            /*
+              display:none; 隐藏元素，不占网页中的任何空间，让这个元素彻底消失（看不见也摸不着）
+              visibility:hidden; 把层隐藏，也就是你看不到它的内容但是它内容所占据的空间还是存在的。（看不见但摸得到）
+            */
+           visibility:hidden;  /*默认不显示*/
+           position:absolute;  /*绝对定位，由于父级菜单已经设置了相对定位，可以根据top,bottom,right,left来精确设置二级菜单的位置*/
+           list-style:none; /*去除菜单项前的圆点*/
+           top:30px; /*上边距+下边距+尖角高度 12px + 12px + 6px*/
+           /*z-index:1;*/ /*元素的堆叠顺序*/
+           padding:0;/*无内边距*/
+           background-image:linear-gradient(#444,#111); /*线性渐变*/
+           box-shadow:0 -1 0 rgba(255,255,255,.3); /*半透明的阴影，.3是0.3的意思*/
+           -moz-box-shadow:0 -1 0 rgba(255,255,255,.3); /*Firefox*/
+           -webkit-box-shadow:0 -1 0 rgba(255,255,255,.3);/*Chrome, Safari*/
+           -o-box-shadow:0 -1 0 rgba(255,255,255,.3);/*Opera*/
+           -ms-box-shadow:0 -1 0 rgba(255,255,255,.3);/*IE*/
+           border-radius:3px; /*圆角边框3px*/
+           -moz-border-radius:3px;/*Firefox*/
+           -webkit-border-radius:3px;/*Chrome, Safari*/
+           -o-border-radius:3px;/*Opera*/
+           -ms-border-radius:3px;/*IE*/
+           opacity:0; /*默认透明*/
+           margin: 20px 0 0 0; /*上边距为20px*/
+           /*
+             all:所有属性都将获得过渡效果
+             .2s 完成过渡效果需要0.2秒
+             ease-in-out 以慢速开始和结束的过渡效果
+             配合一级菜单的hover一起使用
+           */
+           transition: all .2s ease-in-out; 
+           -moz-transition: all .2s ease-in-out; 
+           -webkit-transition: all .2s ease-in-out; 
+           -o-transition: all .2s ease-in-out; 
+           -ms-transition: all .2s ease-in-out; 
+        }
+        .middle-nav ul:hover > ul /*点击二级菜单的子菜单的样式，即三级菜单的样式*/
+        {
+            opacity:1; /*点击时完全不透明*/
+            visibility:visible; /*点击时显示*/
+           /* margin:0;*/ /*外边距0px*/
+        }
+        .middle-nav ul li:last-child /*二级菜单的最后一个菜单项*/
+        {  
+            box-shadow:none; /*去掉盒子阴影*/
+           -moz-box-shadow:none; /*Firefox*/
+           -webkit-box-shadow:none;/*Chrome, Safari*/
+           -o-box-shadow:none;/*Opera*/
+           -ms-box-shadow:none;/*IE*/
+        }
+        .middle-nav ul  ul /*三级菜单的总体样式*/
+        {
+           position: absolute; /*绝对定位，由于二级菜单已经设置了相对定位，可以根据top,bottom,right,left来精确设置三级菜单的位置*/
+           left:126px;  /*向二级菜单左侧偏移126px*/
+           top:0px; /*与二级菜单上侧对齐*/
+           margin:0 0 0 6px; /*左外边距为6px,为尖角留出位置*/
+           box-shadow:-1px 0 0 rgba(255,255,255,.3); /*盒子阴影，水平向右偏移-1像素，垂直向下偏移0像素，不模糊，颜色为黑色，透明度0.3*/
+           -moz-box-shadow:-1px 0 0 rgba(255,255,255,.3); /*Firefox*/
+           -webkit-box-shadow:-1px 0 0 rgba(255,255,255,.3);/*Chrome, Safari*/
+           -o-box-shadow:-1px 0 0 rgba(255,255,255,.3);/*Opera*/
+           -ms-box-shadow:-1px 0 0 rgba(255,255,255,.3);/*IE*/
+        }
+        .middle-nav ul li /*二级菜单的菜单项*/
+        {
+           position:relative;  /*相对定位，用于设置三级菜单的位置*/
+           float:none; /*无浮动*/
+           display:block; /*以块元素显示*/
+           border:0px;/*无边框*/
+           box-shadow:0 1px 0 #111,0 2px 0 #666; /*两个阴影叠加*/ 
+           -moz-box-shadow:0 1px 0 #111,0 2px 0 #666; /*Firefox*/
+           -webkit-box-shadow:0 1px 0 #111,0 2px 0 #666;/*Chrome, Safari*/
+           -o-box-shadow:0 1px 0 #111,0 2px 0 #666;/*Opera*/
+           -ms-box-shadow:0 1px 0 #111,0 2px 0 #666;/*IE*/  
+        }
+        .middle-nav ul a /*二级菜单和三级菜单下的超级连接*/
+        {
+           padding:10px;/*内边距10px*/
+           width:105px;/*宽度105像素*/
+           display:block; /*以块元素显示*/
+           float:none;/*无浮动*/
+           text-align:center;/*文字居中*/
+        }
+        .middle-nav ul a:hover /*点击二级菜单和三级菜单下的超级连接时的样式*/
+        {
+          background-color :#0186ba; /*颜色为蓝色*/
+          background-image: linear-gradient(#04acec,#0186ba); /*颜色由浅蓝到深蓝渐变*/
+        }
+        .middle-nav ul li:first-child > a /*二级菜单的第一个li子元素的超链接设置为圆角*/
+        {
+            /*注意和margin，padding的上右下左顺序不同*/
+            border-radius: 3px 3px 0 0; /*左上，右上圆角*/
+            -moz-border-radius:3px 3px 0 0;/*Firefox*/
+           -webkit-border-radius:3px 3px 0 0;/*Chrome, Safari*/
+           -o-border-radius:3px 3px 0 0;/*Opera*/
+           -ms-border-radius:3px 3px 0 0;/*IE*/
+        }
+       .middle-nav ul li:last-child > a /*二级菜单的最后一个li子元素的超链接设置为圆角*/
+        {
+            border-radius: 0 0 3px 3px;/*左下，右下圆角*/
+            -moz-border-radius:0 0 3px 3px;/*Firefox*/
+           -webkit-border-radius:0 0 3px 3px;/*Chrome, Safari*/
+           -o-border-radius:0 0 3px 3px;/*Opera*/
+           -ms-border-radius:0 0 3px 3px;/*IE*/
+        }
+        .middle-nav ul >li:first-child > a:before /*向二级菜单第一个菜单项超链接前添加内容（只有第一个a标签前才显示尖角）*/
+        {
+            /*设置二级菜单向上尖角效果*/
+            content:""; /*必须给元素的后加上一个空值*/
+            position:absolute; /*绝对定位*/
+            left:40px; /*尖角向左偏移40px*/
+            top:-6px; /*由于尖角的高度为6px，因此向上偏移6px*/ 
+            border-left:6px solid transparent; /*设置左边框不显示*/
+            border-right:6px solid transparent;/*设置右边框不显示*/
+            border-bottom:6px solid #444; /*设置下边框6px，颜色为深灰色*/
+        }
+         .middle-nav ul li > a:hover:before /*点击二级菜单的菜单项超链接*/
+         {
+             border-bottom-color:#04acec; /*下边框颜色为浅蓝色*/
+         }
+         .middle-nav ul ul li:first-child a:before /*向三级菜单第一个菜单项的超链接前添加内容*/
+         {
+             /*设置三级菜单向左尖角效果*/
+             left : -6px; /*向左偏移-6px*/
+             top:50%; /*向上偏移50%，即尖角在中间显示*/    
+             border-left:0px;/*无左边框*/
+             border-bottom: 6px solid transparent; /*下边框透明*/
+             border-top:6px solid transparent;/*上边框透明*/
+             border-right:6px solid #3b3b3b; /*右边框6px，颜色为深灰色*/
+         }
+         .middle-nav ul ul li:first-child a:hover:before /*点击三级菜单第一个菜单项的超链接*/
+         {
+           border-right-color:#0299d3;    /*设置右边框颜色为蓝色*/
+           border-bottom-color:transparent; /*覆盖父级样式，设置底部边框透明*/
+         }
+         
+          /*  ============================第三个菜单的样式 =========================== */
+          #divanimate
+          {
+              width:960px;
+              margin:100px auto;
+          }
+         .animate-nav a
+         {
+             text-decoration:none;
+             margin-left:60px;
+             color:#666;
+         } 
+         .animate-expandzone
+         {
+             height:130px;
+             background-color:#333d4d;
+             overflow:hidden;
+             position:relative;
+             top:10px;
+             width:100%;
+         }
+         .animate-expandzone a
+         {
+              text-decoration:none;
+              color:#fff;
+         }
+
+         .animate-expand
+         {
+             height:130px;
+             width:500%; /* 包裹层的宽度为500% */
+         }
+         .animate-menuitem
+         {
+             width:20%; /* 共有5个菜单，因此宽度为包裹层的1/5，即100% */
+             text-align:center;
+             float:left;
+             line-height:110px;
+             color:#fff;
+         }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+
+            $("#divlist a").on("click", function () {
+                var currentIndex = $(this).index(); //当前点击的是一级菜单中的第几个超级连接
+                //$("#divlist a").eq(currentIndex).css({ backgroundColor: "#333D4D" });
+                var subMlValue = "-" + currentIndex * 100 + "%"; //计算二级菜单的margin-left值。包裹层宽度为500%
+                $("#divexpandzone .animate-expand").animate({ marginLeft: subMlValue });
+                if (!$("#divexpandzone").hasClass("active")) {
+                    $("#divexpandzone .animate-expand").css({ marginLeft: subMlValue }); //驼峰式写法，相当于margin-left
+                    $("#divexpandzone").animate({ height: "130px" }).addClass("active"); //active为虚拟的样式类
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+   <!--菜单top-->
+   <div>
+        <ul class="top-nav">
+           <li><a href="#">首页<span>Home</span></a></li>
+           <li><a href="#">课程<span>Course</span></a></li>
+           <li><a href="#">实战<span>Training</span></a></li>
+           <li><a href="#">关于<span>About</span></a></li>
+        </ul>
+    </div>
+  
+    <!--菜单middle-->
+        <ul class="middle-nav">
+           <li><a href="#">首页</a></li>
+           <li><a href="#">课程大厅</a></li>
+           <li><a href="#">学习中心</a>
+               <ul>
+                  <li><a href="#">前端课程</a>
+                      <ul>
+                         <li><a href="#">html</a></li>
+                         <li><a href="#">javascript</a></li>
+                         <li><a href="#">css</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">移动开发</a>
+                      <ul>
+                         <li><a href="#">android</a></li>
+                         <li><a href="#">ios</a></li>
+                         <li><a href="#">windows phone</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">后端开发</a>
+                       <ul>
+                         <li><a href="#">java</a></li>
+                         <li><a href="#">.net</a></li>
+                         <li><a href="#">php</a></li>
+                      </ul>
+                  </li>
+               </ul>
+           </li>
+           <li><a href="#">关于我们</a></li>
+        </ul>
+      <!--菜单animate-->
+     
+      <div id="divanimate">
+          <div id="divlist" class="animate-nav">
+               <a href="#">首页</a>
+               <a href="#">课程大厅</a>
+               <a href="#">学习中心</a>
+               <a href="#">个人资料</a>
+               <a href="#">关于我们</a>
+          </div>
+          <div id="divexpandzone" class="animate-expandzone">
+              <div class="animate-expand">
+                  <div class="animate-menuitem">
+                      <a href="#">首页的内容</a>
+                  </div>
+                  <div class="animate-menuitem">
+                      <a href="#">课程大厅的内容</a>
+                  </div>
+                  <div class="animate-menuitem">
+                      <a href="#">学习中心的内容</a>
+                  </div>
+                  <div class="animate-menuitem">
+                      <a href="#">个人资料的内容</a>
+                  </div>
+                  <div class="animate-menuitem">
+                      <a href="#">关于我们的内容</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+</body>
+</html>

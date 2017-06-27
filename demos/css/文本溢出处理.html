@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width:device-width,initial-scale:1.0,user-scalable=no">
+	<title>Document</title>
+	<style type="text/css">
+         /*单行文本溢出*/
+         .inaline{
+         	overflow: hidden;
+         	white-space: nowrap;
+            text-overflow: ellipsis;
+         }
+         /*多行文本溢出*/
+         .inmultiline{
+         	display: -webkit-box !important;
+         	overflow: hidden;
+         	text-overflow: ellipsis;
+         	word-break: break-all;
+         	-webkit-box-orient: vertical;
+         	-webkit-line-clamp: 3;
+         }
+	</style>
+</head>
+<body>
+       <div style="width:200px;" class="inaline">This is some long text that will not fit in the box</div>
+       <br>
+       <div style="width:300px;" class="inmultiline">
+       	GitHub is a development platform inspired by the way you work. From open source to business, you can host and review code, manage projects, and build software alongside millions of other developers
+       </div>
+</body>
+</html>
