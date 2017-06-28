@@ -3,26 +3,61 @@
 <head>
 	<meta charset="UTF-8">
 	 <meta name="viewport" content="width:device-width,initial-scale:1.0,user-scalable=no">
-	<title>homepage</title>
+	<title>Document</title>
 	<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="./js/common.js"></script>
+	<style type="text/css">
+	    body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{
+	    	margin:0;padding:0
+	    }
+	    body,button,input,select,textarea{
+	    	font:12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+	    }
+	    .main-container{
+	    	width:1002px;
+	    	margin: 0 auto;
+	    	
+	    }
+		.header{
+			height: 117px;
+			background: url(images/headbg.jpg) no-repeat;
+			position: relative;
+		}
+		.header a:link,.header a:hover,.header a:visited,.header a:active{
+           color: #fff;
+	     }
+		.header-corner{
+            position: absolute;
+            right:50px;
+            top:5px;
+            color: #fff;
+		}
+        .body-container{
+        	height:500px;
+        	width:1002px;
+            
+        	background: url(images/bodybg.jpg) no-repeat;
+        }
+        .banner{
+        	width:938px;
+        	height: 261px;
+        	margin: 0 auto;
+        	background: url(images/banner.jpg) no-repeat;
+        }
+	</style>
 </head>
 <body>
-	<div class="container-fluid">
-	  <ol class="breadcrumb">
-	  <li><a href="#">首页</a></li>
-	  <li><a href="#">前端</a></li>
-	  <li class="active" href="#">CSS</li>
-	</ol>
-	 <ul class="list-group">
-          <li class="list-group-item"><a href='./demos/css/vertical_center_css3.html'>CSS3方式实现水平垂直居中</a></li>
-	  <li class="list-group-item"><a href='./demos/css/vertical_center_flex.html'>Flex方式实现水平垂直居中</a></li>
-	  <li class="list-group-item"><a href='./demos/css/equal_ratio_partition_flex.html'>响应式布局之Flex等比划分</a></li>
-	  <li class="list-group-item"><a href='./demos/css/unequal_ratio_partition_flex.html'>响应式布局之flex混合划分</a></li>
-	  <li class="list-group-item"><a href='./demos/css/responsive_media.html'>响应式布局之Media设备类型</a></li>
-	  <li class="list-group-item"><a href='./demos/css/muticolumn_layout.html'>CSS3实现多列布局</a></li>
-	  <li class="list-group-item"><a href='./demos/css/menu_style.html'>定制菜单样式</a></li>
-	  <li class="list-group-item"><a href='./demos/css/text_overflow.html'>CSS3文本溢出处理</a></li>
-   </ul> 
-	</div>
+   <div class="main-container">
+   	    <div class="header">
+   	    	 <div class="header-corner">·&nbsp;<a href="javascript:void(0);" onclick="AddFavorite('Homepage！',location.href)">收藏本站</a>&nbsp;&nbsp;&nbsp;·&nbsp;<a href="javascript:void(0);" onclick="SetHome(this,'#');">设为首页</a>&nbsp;&nbsp;&nbsp;·&nbsp;<a href="mailto:lidg@163.com">企业邮箱</a></div>
+   	    </div>
+   	    <div class="body-container">
+   	    	 <div class="banner">
+   	    	 </div>
+   	    </div>
+   	    <div class="footer">
+   	    	
+   	    </div>
+   </div>
 </body>
 </html>
