@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+     var msg1;
+     $(function(){
+        $("#btn1").click(function(){
+             setmsg1();
+             showmsg1();
+        })
+        $("#btn2").click(function(){
+             setmsg2();
+             showmsg2();
+        })
+        $("#btn3").click(function(){
+             setmsg3();
+             showmsg3();
+        })
+     })
+     function setmsg1(){
+         msg1 = "hello world 1";
+     }
+     function showmsg1(){
+        alert(msg1);
+     }
+     function setmsg2(){
+         msg2 = "hello world 2";
+     }
+     function showmsg2(){
+        alert(msg2);
+     }
+     function setmsg3(){
+         window.msg3 = "hello world 3";
+     }
+     function showmsg3(){
+        alert(window.msg3);
+     }
+  </script>
+</head>
+<body>
+   <input type="button" value="test1" id="btn1">
+   <input type="button" value="test2" id="btn2">
+   <input type="button" value="test3" id="btn3">
+</body>
+</html>
+
