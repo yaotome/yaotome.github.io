@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+     $("#btn1").click(function(){
+          //方法的链式调用
+          (function(o){
+            alert(o);
+            return arguments.callee;
+          })("第一次调用")("第二次调用")("第三次调用");
+        })
+     $("#btn2").click(function(){
+        //递归调用
+        var result = (function(n) {
+          if (n <=1)
+            return 1;
+          else
+            return n + arguments.callee(n - 1);
+        })(100);
+        alert(result);
+
+      })
+
+     $("#btn3").click(function(){
+
+      var func = function(){
+           //打印方法体
+           alert(arguments.callee);
+           //打印方法名 func
+           alert(arguments.callee.name);
+           //打印调用方法体
+           alert(arguments.callee.caller);
+           //打印调用方法名 callfunc
+           alert(arguments.callee.caller.name);
+         };
+
+         function callfunc(){
+           func();
+         }
+
+         callfunc();
+       })
+     
+
+
+   })
+
+
+ </script>
+</head>
+<body>
+  <input type="button" value="方法的链式调用" id="btn1"/>
+  <input type="button" value="递归调用" id="btn2"/>
+  <input type="button" value="获取方法信息" id="btn3">
+</body>
+</html>
+
