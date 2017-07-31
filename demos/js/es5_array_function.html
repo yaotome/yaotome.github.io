@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      var checknum = [15,3,2,6,7,1,9,10];
+
+        $("#btn1").click(function(){
+            //数组中的元素全部满足指定条件返回true
+            //运行结果为false
+            var checkresult = checknum.every(function(item,index,array){
+                 return item > 1 ;    
+            });
+            alert(checkresult);
+        })
+        $("#btn2").click(function(){
+           //数组中的元素部分满足指定条件返回true
+           //运行结果为false
+            var checkresult = checknum.some(function(item,index,array){
+                 return item > 15;
+            });
+            alert(checkresult);
+         })
+        $("#btn3").click(function(){
+           //把符合条件的项目组成一个新的数组
+           var checkresult = checknum.filter(function(item,index,array){
+                return item > 3;
+           });
+           checkresult.forEach(function(value, index, array){
+               console.log(value);
+           })
+         })
+        $("#btn4").click(function(){
+            //对数组元素进行运算并将运算结果
+           var checkresult = checknum.map(function(value, index, array){
+               return '新值：' + parseInt(value + 1);
+           });
+           checkresult.forEach(function(value, index, array){
+               console.log(value);
+           })
+         })
+      })
+
+
+    </script>
+  </head>
+  <body>
+   原数组：[15,3,2,6,7,1,9,10]
+   <br>
+   <input type="button" id="btn1" value="every"/>&nbsp;&nbsp;&nbsp;运行结果：false<br>
+   <input type="button" id="btn2" value="some"/>&nbsp;&nbsp;&nbsp;运行结果：false<br>
+   <input type="button" id="btn3" value="filter"/>&nbsp;&nbsp;&nbsp;运行结果：[15,6,7,9,10]<br>
+   <input type="button" id="btn4" value="map"/>&nbsp;&nbsp;&nbsp;运行结果：['新值：16','新值：4','新值：3','新值：7','新值：8','新值：2','新值：10','新值：11']
+ </body>
+ </html>
+
