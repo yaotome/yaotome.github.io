@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      //closure
+      $("#btnclosure").click(function(){
+          var str = "全局变量";
+          function foo(){
+            var str = "局部变量";
+            return function(){
+              alert(str);
+            }
+          }
+          var result = foo();
+          result(); //局部变量
+      })
+     })
+  </script>
+</head>
+<body>
+  <input type="button" value="click me" id="btnclosure">
+</body>
+</html>
+
