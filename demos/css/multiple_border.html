@@ -28,6 +28,19 @@
         left:500px;
         padding: 10px;
       }
+      .bordertest3{
+        background: lightblue;
+        border: 15px solid lightblue;
+        border-radius: 5px;
+        outline: 3px dashed #fff;
+        outline-offset: -10px;
+        width:300px;
+        height:200px;
+        position: absolute;
+        top:100px;
+        left:900px;
+        padding: 10px;
+      }
   </style>
 </head>
 <body>
@@ -35,7 +48,10 @@
      使用box-shadow模拟多重边框，可以模拟任意层边框，但只能模拟实线边框。
    </div>
    <div class="bordertest2">
-     先设置一层常规边框，再加上outline描边属性产生外层边框。可实现两层边框，并支持实线以外的边框样式。
+     先设置一层常规边框，再加上outline描边属性产生外层边框。可实现两层边框，并支持实线以外的边框样式。结合border-radius属性并不会产生圆角效果。
+   </div>
+   <div class="bordertest3">
+     outline属性结合outline-offset属性的多重边框可以实现缝边效果。
    </div>
 </body>
 </html>
