@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <style type="text/css">
+        .bgposition1 {
+        background: url(./svg/code-pirate.svg)
+                    no-repeat bottom right #58a;
+        background-position: right 20px bottom 10px;
+        width:300px;
+        height: 200px;
+        padding: 10px;
+
+        position: absolute;
+        left:100px;
+        top:100px;
+      }
+
+      .bgposition2 {
+        background: url(./svg/code-pirate.svg)
+                    no-repeat bottom right #58a;
+        background-origin: content-box;
+        width:300px;
+        height: 200px;
+        padding: 10px;
+
+        position: absolute;
+        left:500px;
+        top:100px;
+      }
+
+      .bgposition3 {
+        background: url(./svg/code-pirate.svg)
+                    no-repeat bottom right #58a;
+        background-position: calc(100% - 20px) calc(100% - 10px);
+        width:300px;
+        height: 200px;
+        padding: 10px;
+
+        position: absolute;
+        left:900px;
+        top:100px;
+      }
+  </style>
+</head>
+<body>
+    <div class="bgposition1"></div>
+    <div class="bgposition2"></div>
+    <div class="bgposition3"></div>
+</body>
+</html>
+
