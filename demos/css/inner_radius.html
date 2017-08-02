@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <style type="text/css">
+
+    .innerradius1{
+      background: #655;
+      padding: .8em;
+      width:300px;
+    }
+    .innerradius1>div{
+      background: tan;
+      border-radius: .8em;
+      padding: 1em;
+    }
+    .innerradius2{
+      background: tan; 
+      border-radius: .8em; /*div为圆角*/
+      padding: 1em; 
+      /*注意：阴影宽度与描边宽度并不一定相同，只需要指定一个足够填充“空隙”的扩张值就可以了*/
+      box-shadow: 0 0 0 .5em #655; /*div的阴影，用于填充div圆角与描边之间的空白区域，因此阴影尺寸与描边宽度基本相同*/
+      outline: .5em solid #655; /*div的描边*/
+      width:300px;
+    </style>
+  </head>
+  <body>
+    <div class="innerradius1">
+      <div>
+       I have a nice subtle inner rounding, don't I look pretty?
+     </div>
+   </div>
+   <br>
+   <div class="innerradius2">
+      I have a nice subtle inner rounding, don't I look pretty?
+   </div>
+ </body>
+ </html>
+
