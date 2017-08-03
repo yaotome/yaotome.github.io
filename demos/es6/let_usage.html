@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <style type="text/css">
+  </style>
+  <script type="text/javascript">
+    $(function(){
+     $("#test1").click(function(){
+       var a = [];
+       for(var i = 0;i<10;i++){
+        a[i] = function(){
+          alert(i);
+        }
+      }
+      var func = a[7];
+      func();
+    })
+     $("#test2").click(function(){
+        var a = [];
+        for(let i = 0;i<10;i++){
+        a[i] = function(){
+        alert(i);
+      }
+      }
+      var func = a[7];
+      func();
+     })
+     $("#test3").click(function(){
+        var arr= [1,2,3,4,5];
+        for(var i=0;i<arr.length;i++){
+            //something to do...
+        } 
+        alert(i); //如果使用let，会报引用错误
+     })
+      $("#test4").click(function(){
+         console.log(str);
+         var str = "111" //undefined
+        // let str = "111"; //str is not defined
+      })
+      $("#test5").click(function(){
+        var tmp = 123;
+        if(true){
+          tmp = "abc"; //tmp is not defined
+          let tmp; //将声明的变量绑定到这个区域，不再受外部影响
+        }
+      })
+   })
+ </script>
+</head>
+<body>
+ <pre>
+ var a = [];
+    for(var i = 0;i<10;i++){
+      a[i] = function(){
+      alert(i);
+    }
+  }
+  var func = a[7];
+  func();
+</pre>
+<input type="button" value="var声明为全局变量" id="test1">
+ <pre>
+ var a = [];
+    for(let i = 0;i<10;i++){
+      a[i] = function(){
+      alert(i);
+    }
+  }
+  var func = a[7];
+  func();
+</pre>
+<input type="button" value="let声明只在所在代码块内有效" id="test2">
+<pre>
+  var arr= [1,2,3,4,5];
+  for(var i=0; i < arr.length;i++){
+      //something to do...
+   } 
+  alert(i); //如果使用let，会报引用错误
+</pre>
+<input type="button" value="let适用于for循环计数器" id="test3">
+<pre>
+  console.log(str);
+  var str = "111" //undefined
+  // let str = "111"; //str is not defined
+</pre>
+<input type="button" value="let必须在声明变量后使用" id="test4">
+<pre>
+  var tmp = 123;
+  if(true){
+     tmp = "abc"; //tmp is not defined
+     let tmp; //将声明的变量绑定到这个区域，不再受外部影响
+  }
+</pre>
+<input type="button" value="暂时性死区" id="test5">
+</body>
+</html>
+
