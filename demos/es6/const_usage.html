@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <style type="text/css">
+  </style>
+  <script type="text/javascript">
+     function test1(){
+         const person = {
+            name : 'Tom',
+            age : 18
+         };
+         person.age = 20;
+         alert(person.age);
+      }
+      function test2(){
+          const arr = [];
+          arr.push(1);
+          arr.push(2);
+          alert(arr.length);
+          arr.length = 0;
+          alert(arr.length);
+      }
+      function test3(){
+          const person = Object.freeze({
+              name : 'Tom',
+              age : 18
+          });
+
+           person.age = 20;
+           alert(person.age); //18
+      }
+      function test4(){
+          var person =  {
+              name : 'Tom',
+              age : 18,
+              friend : {
+                  name : 'Jerry',
+                  age : 19 
+                }
+             };
+          var constantize = (obj)=>{
+            Object.freeze(obj);
+            Object.keys(obj).forEach((key,value)=>{
+              if(typeof obj[key] === 'object'){
+                  constantize(obj[key]);
+              }
+            })
+          };
+           constantize(person);
+           person.friend.age = 25;
+           alert(person.friend.age); //19
+      }
+ </script>
+</head>
+<body>
+<input type="button" value='click' id='test1' onclick='test1()' />
+<input type="button" value='click' id='test2' onclick='test2()' />
+<input type="button" value='click' id='test3' onclick='test3()' />
+<input type="button" value='click' id='test4' onclick='test4()' />
+</body>
+</html>
+
