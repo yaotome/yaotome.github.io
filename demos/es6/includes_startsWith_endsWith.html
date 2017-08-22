@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      let s = "hello world!";
+
+      function clickIncludes(){
+          let text = $("#txtDemo").val();
+          if(text === "" ) return;
+          let result = s.includes(text) == true ? "包含" : "不包含";
+          alert("hello world!" + result + text);
+      }
+
+      function clickStartsWith(){
+          let text = $("#txtDemo").val();
+          if(text === "" ) return;
+          let result = s.startsWith(text) == true ? "以" + text + "打头" : "不以" + text + "打头";
+          alert("hello world!" + result);
+      }
+
+      function clickEndssWith(){
+          let text = $("#txtDemo").val();
+          if(text === "" ) return;
+          let result = s.endsWith(text) == true ? "以" + text + "结尾" : "不以" + text + "结尾";
+          alert("hello world!" + result);
+      }
+  </script>
+</head>
+<body>
+    <h3>测试字符串：hello world!</h3>
+    <input type="text" id="txtDemo" />
+    <button onclick="clickIncludes()">includes</button>
+    <button onclick="clickStartsWith()">startsWith</button>
+    <button onclick="clickEndssWith()">endsWith</button>
+</body>
+</html>
+
