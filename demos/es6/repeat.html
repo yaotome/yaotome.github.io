@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      function clickRepeat(){
+          let word = $("#txtWord").val();
+          let repeatNumber = $("#txtRepeatNumber").val();
+          try
+          {
+            let result = word.repeat(repeatNumber);
+            alert(result); 
+          }catch(error){
+            alert(error);
+          }
+      }
+  </script>
+</head>
+<body>
+    原字符串： <input type="text" id="txtWord" />
+    重复次数： <input type="number" id="txtRepeatNumber">
+    <button onclick="clickRepeat()">includes</button>
+</body>
+</html>
+
