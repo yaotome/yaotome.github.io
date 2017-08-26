@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      function append(){
+           var basket = {
+               count : 5,
+               onSale : 2
+           };
+          //大括号内可以放入任意的js表达式，可以进行运算，以及引用对象属性。
+          //模板字符串中还可以调用函数
+           $("#divResult").append(`
+                 There are <b>${basket.count}</b> items 
+                 in you basket,<b>${basket.onSale}</b>
+                 are on sale!
+           `);
+ 
+       }
+  </script>
+</head>
+<body>
+   <button id="btnAppend" onclick="append()" >append</button>
+   <div id="divResult"></div>
+</body>
+</html>
+
