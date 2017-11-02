@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="css/common.css" />
+<link type="text/css" rel="stylesheet" href="css/product.css" />
+<script type="text/javascript" src="js/common.js"></script>
+<title>爱玛克登录页</title>
+</head>
+<body onload="margin_top_height();">
+<div id="wrap">
+<div class="header">
+    <ul id="QuickMenu">
+        <li class="my_account"><a href="#">Gordon</a><span>你好,欢迎光临爱玛客！</span></li>
+        <li class="my_icon" onmouseover="view_account()"><a href="user.htm">我的爱玛客<span id="my_icon"></span></a></li>
+        <li class=""><a href="flow_cart.htm">购物车</a></li>
+        <li class=""><a href="#">网站联盟</a></li>
+        <li class="map"><a href="#">网站地图</a></li>
+    </ul>
+    <ul id="my_account" class="my_account2" onmouseover="view_account()" onmouseout="hide_account()">
+        <li class="my_icon"><a href="user.htm">我的爱玛客</a><span></span></li> 
+        <li><a href="user_order.htm">我的订单</a></li>
+        <li><a href="user_credit.htm">我的积分</a></li>
+        <li><a href="#">我的优惠券</a></li> 
+        <li><a href="#">快递查询</a></li>         
+    </ul>       
+    <div id="logo">
+        <div class="logo"><a href="/" title="首页"><img src="images/logo.jpg" alt="北鼎首页" width="224" height="35" /></a></div>
+        <div class="contact_phone"><img src="images/contact_phone.jpg" alt="北鼎首页" width="233" height="17" /></div>
+    </div>
+    <div id="nav">
+        <ul class="mian_nav">
+            <li class="nav_index"><a href="index.htm" title="">首页</a></li>
+            <li class=""><a href="product_custom.htm" title="">个性定制</a></li>
+            <li class=""><a href="product.htm" title="">产品类目</a></li>
+        </ul>
+        <ul class="sub_nav">
+            <li class=""><a href="#" title="">对象定制</a></li>
+            <li class=""><a href="#" title="">新品区</a></li>
+            <li class=""><a href="#" title="">特价区</a></li>
+        </ul>
+    </div>
+</div>
+<div id="search">
+    <div class="search_con">
+        <div id="menu" class="menu2">
+            <div id="product_class" onmouseout="menu_style2(1)" onmouseover="menu_style2(2)">
+                <div class="product_class_txt">所有的个性产品<span id="icon1" class="icon_1"></span></div>
+            </div>
+        </div>
+        <ul id="menu_ul" class="hide"  onmouseout="menu_style2(1)" onmouseover="menu_style2(2)">
+        	<li id="foucs1" onmouseover="view_menu(1)" onmouseout="hide_menu(1)" >
+            	<div><a href="#">杯子影像<b class="a_icon1"></b></a><span>白瓷杯 变色杯</span></div>
+                <ul>
+                	<li class="one"><a href="#">变色杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">陶瓷杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">运动水壶<b class="a_icon2"></b></a></li>
+                </ul>
+            </li>
+        	<li id="foucs2" onmouseover="view_menu(2)" onmouseout="hide_menu(2)" >
+            	<div><a href="#">杯子影像<b class="a_icon1"></b></a><span>白瓷杯 变色杯</span></div>
+                <ul>
+                	<li class="one"><a href="#">变色杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">陶瓷杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">运动水壶<b class="a_icon2"></b></a></li>
+                </ul>
+            </li>
+        	<li id="foucs3" onmouseover="view_menu(3)" onmouseout="hide_menu(3)" >
+            	<div><a href="#">杯子影像<b class="a_icon1"></b></a><span>白瓷杯 变色杯</span></div>
+                <ul>
+                	<li class="one"><a href="#">变色杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">陶瓷杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">运动水壶<b class="a_icon2"></b></a></li>
+                </ul>
+            </li>
+        	<li id="foucs4" onmouseover="view_menu(4)" onmouseout="hide_menu(4)" >
+            	<div><a href="#">杯子影像<b class="a_icon1"></b></a><span>白瓷杯 变色杯</span></div>
+                <ul>
+                	<li class="one"><a href="#">变色杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">陶瓷杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">运动水壶<b class="a_icon2"></b></a></li>
+                </ul>
+            </li>            
+        </ul>
+        <div class="search_form">
+            <form method="post" action="">
+                <div class="search_txt"><input type="text" value="" name="" /></div>
+                <div class="search_sub"><input type="submit" value="" name="" /></div>
+            </form>
+        </div>
+        <ul class="search_keywords">
+            <li><a href="#" title="">关键字</a></li>
+            <li><a href="#" title="">关键字</a></li>
+            <li><a href="#" title="">关键字</a></li>
+        </ul>
+    </div>
+</div>
+<div class="main">
+    <div class="location"><span class="icon"></span>你现在的位置：<a href="#">爱玛克</a>&gt;<a class="current_a" href="#">登录</a> </div>
+    	<div class="box5">
+        <div class="con_left">
+            <img src="images/product_pic3.jpg" alt="产品图片" />
+        </div>
+        <form action="" method="post">
+        <ul class="con_right">
+            <li class="title">神奇魔术变色杯</li>
+            <li>促&nbsp;&nbsp;销&nbsp;&nbsp;价： <span class="txt1">￥50.00</span>  爱玛价： <span class="txt2">￥58.00</span></li>
+            <li>一周成交：<span class="txt3">1390件</span></li>
+            <li>用户评论：<span>927&nbsp;条</span></li>
+            <li>运&nbsp;&nbsp;&nbsp;&nbsp;费：<span class="txt4">满 138.00 元包邮，江浙沪 5 元，其它地区 9 元起</span><a href="#" class="txt5" title="">  更多&gt;&gt;</a></li>
+            <li>购买10件以上，即享受 <a href="#" class="txt6" title="">团购优惠&gt;&gt;</a></li>
+            <li>数量：<input type="text" class="inputBg" name="" value="1" />件</li>
+            <li class="txt7">颜色</li>
+            <li class="txt8"><input name="" type="radio" checked="checked" />白色 [￥0.00元]</li>
+            <li class="txt8"><input name="" type="radio" />黑色 [加￥10.00元]</li>
+            <li class="txt9"><input class="btn1" type="submit" value="" /></li>
+        </ul>
+        </form>
+    </div>
+    <div class="box6">
+    	<div class="con_left">
+    		<div class="con_top">热门推荐</div>
+            <div class="box_con">
+                <ul class="con_ul">
+                    <li><a href="" title=""><img src="images/product_pic2.jpg" alt="产品图片" /></a></li>
+                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪花款</a></li>
+                    <li class="left_price">单价：<span>￥999</span></li>
+                </ul>
+                <ul class="con_ul">
+                    <li><a href="" title=""><img src="images/product_pic2.jpg" alt="产品图片" /></a></li>
+                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪ddddddddddddddddddddddddddddddddddddd花款</a></li>
+                    <li class="left_price">单价：<span>￥999</span></li>
+                </ul> 
+                <ul class="con_ul">
+                    <li><a href="" title=""><img src="images/product_pic2.jpg" alt="产品图片" /></a></li>
+                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪花款</a></li>
+                    <li class="left_price">单价：<span>￥999</span></li>
+                </ul>
+                <ul class="con_ul">
+                    <li><a href="" title=""><img src="images/product_pic2.jpg" alt="产品图片" /></a></li>
+                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪ddddddddddddddddddddddddddddddddddddd花款</a></li>
+                    <li class="left_price">单价：<span>￥999</span></li>
+                </ul> 
+                <ul class="con_ul">
+                    <li><a href="" title=""><img src="images/product_pic2.jpg" alt="产品图片" /></a></li>
+                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪ddddddddddddddddddddddddddddddddddddd花款</a></li>
+                    <li class="left_price">单价：<span>￥999</span></li>
+                </ul> 
+                <ul class="con_ul">
+                    <li><a href="" title=""><img src="images/product_pic2.jpg" alt="产品图片" /></a></li>
+                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪ddddddddddddddddddddddddddddddddddddd花款</a></li>
+                    <li class="left_price">单价：<span>￥999</span></li>
+                </ul>                                 
+            </div>           
+        </div>
+        <div class="con_right">
+            <ul class="tabs">
+                <li id="tb_1" class="hot" onmouseover="HoverLi(1,3,'tb_','in_')"><b></b><a class="hot1" href="#">商品详情</a><span></span></li>
+                <li id="tb_2" class="normaltab" onmouseover="HoverLi(2,3,'tb_','in_')"><b></b><a class="hot2" href="#">用户评价</a><span></span></li>
+                <li id="tb_3" class="normaltab" onmouseover="HoverLi(3,3,'tb_','in_')"><b></b><a class="hot3" href="#">商品销售记录</a><span></span>
+                </li>           
+            </ul>           
+            <div class="box_con1">
+                <div class="nohide" id="in_1">
+                	<div>
+                        <p class="title">神奇变色杯，浪漫一"辈"子！</p>
+                        <p> 通过国际食品安全资格认证</p>
+                        <p> 特级出口品，严格筛选，100个杯子，只有30-40个能达到出口标准！</p>
+                        <p>即"FDA"无毒测试），确保安全健康</p>
+                        <p>品牌承诺：质量问题免费退换，购物更放心！</p>
+                        <p>中国美院设计师原创设计，进口设备与耗材，完美品质非一般小作坊可比！</p>
+                        <li><img src="images/product_pic4.jpg" alt="图片" /></li>
+                        <p><span class="title">好消息：</span>变色杯升级至磨砂效果，遮盖效果更佳，升级不加价！</p>
+                        <li><img src="images/product_pic5.jpg" alt="图片" /></li>
+                    </div>  
+                    <div class="box_con2">
+                        <div class="con_top2">用户评价</div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>                                                
+                    </div>
+                    <div class="box_con3">
+                        <div class="page2">
+                            <a class="prev" href="#">上一页</a>
+                            <a href="#">1</a><a class="current" href='#'>2</a><a href='#'>3</a><a href='#'>4</a><a href='#'>5</a><span class='text'>...</span><a href='#'>6</a>
+                            <a class="next" href="#">下一页</a>
+                        </div>
+                    </div>                                     
+                </div>	
+                <div class="hide" id="in_2">
+					<div class="box_con2">
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>    
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>
+                        <div class="com_con">
+                            <div class="title_user"><a href="#" title="">alleny *** 说：</a></div>
+                            <div class="com_con1">
+                                <div class="com_txt">蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错蛮不错，就是黑的时候图案有点明显，还有手柄那没图片，总体来说还不错，给个好评吧</div>
+                                <div class="com_time">2010/8/24/ 21:51</div>
+                            </div>
+                        </div>                                                                                                                    
+                    </div>
+                    <div class="box_con3">
+                        <div class="page2">
+                            <a class="prev" href="#">上一页</a><a href="#">1</a><a class="current" href='#'>2</a><a href='#'>3</a><a href='#'>4</a><a href='#'>5</a><span class='text'>...</span><a href='#'>6</a><a class="next" href="#">下一页</a>
+                        </div>
+                    </div>                          	
+                </div>
+                <div class="hide" id="in_3">
+					<table>
+                        <tr>
+                            <th width="10%">买家</th>
+                            <th width="60%">宝贝名称</th>
+                            <th width="10%">购买数量</th>
+                            <th width="20%">成交时间</th>
+                        </tr>
+                        <tr>
+                            <td align="center"><strong>kjioupp</strong></td>
+                            <td>[1001－2000个买家信用积分，请点击查看详情] /O2 氧气生活/ 田园风格天然草编布艺收纳筐 大小2个入套装 </td>
+                            <td align="center">1</td>
+                            <td align="center">2010-09-13 22:36:07</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><strong>kjioupp</strong></td>
+                            <td>[1001－2000个买家信用积分，请点击查看详情] /O2 氧气生活/ 田园风格天然草编布艺收纳筐 大小2个入套装 </td>
+                            <td align="center">1</td>
+                            <td align="center">2010-09-13 22:36:07</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><strong>kjioupp</strong></td>
+                            <td>[1001－2000个买家信用积分，请点击查看详情] /O2 氧气生活/ 田园风格天然草编布艺收纳筐 大小2个入套装 </td>
+                            <td align="center">1</td>
+                            <td align="center">2010-09-13 22:36:07</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><strong>kjioupp</strong></td>
+                            <td>[1001－2000个买家信用积分，请点击查看详情] /O2 氧气生活/ 田园风格天然草编布艺收纳筐 大小2个入套装 </td>
+                            <td align="center">1</td>
+                            <td align="center">2010-09-13 22:36:07</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><strong>kjioupp</strong></td>
+                            <td>[1001－2000个买家信用积分，请点击查看详情] /O2 氧气生活/ 田园风格天然草编布艺收纳筐 大小2个入套装 </td>
+                            <td align="center">1</td>
+                            <td align="center">2010-09-13 22:36:07</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><strong>kjioupp</strong></td>
+                            <td>[1001－2000个买家信用积分，请点击查看详情] /O2 氧气生活/ 田园风格天然草编布艺收纳筐 大小2个入套装 </td>
+                            <td align="center">1</td>
+                            <td align="center">2010-09-13 22:36:07</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><strong>kjioupp</strong></td>
+                            <td>[1001－2000个买家信用积分，请点击查看详情] /O2 氧气生活/ 田园风格天然草编布艺收纳筐 大小2个入套装 </td>
+                            <td align="center">1</td>
+                            <td align="center">2010-09-13 22:36:07</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><strong>kjioupp</strong></td>
+                            <td>[1001－2000个买家信用积分，请点击查看详情] /O2 氧气生活/ 田园风格天然草编布艺收纳筐 大小2个入套装 </td>
+                            <td align="center">1</td>
+                            <td align="center">2010-09-13 22:36:07</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><strong>kjioupp</strong></td>
+                            <td>[1001－2000个买家信用积分，请点击查看详情] /O2 氧气生活/ 田园风格天然草编布艺收纳筐 大小2个入套装 </td>
+                            <td align="center">1</td>
+                            <td align="center">2010-09-13 22:36:07</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><strong>kjioupp</strong></td>
+                            <td>[1001－2000个买家信用积分，请点击查看详情] /O2 氧气生活/ 田园风格天然草编布艺收纳筐 大小2个入套装 </td>
+                            <td align="center">1</td>
+                            <td align="center">2010-09-13 22:36:07</td>
+                        </tr>
+                    </table>
+                    <div class="box_con3">
+                        <div class="page2">
+                            <a class="prev" href="#">上一页</a><a href="#">1</a><a class="current" href='#'>2</a><a href='#'>3</a><a href='#'>4</a><a href='#'>5</a><span class='text'>...</span><a href='#'>6</a><a class="next" href="#">下一页</a>
+                        </div>
+                    </div> 
+                </div>	
+			</div>
+
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="sever">
+        <div class="array_in">
+            <ul>
+                <li class="title"><a href="#">常见问题</a></li>
+                <li><a href="#">怎样在线支付？</a></li>
+                <li><a href="#">产品有问题如何退货？ </a></li>
+                <li><a href="#">送货范围及资费标准</a></li>
+            </ul>
+        </div>
+        <div class="array_in">
+            <ul>
+                <li class="title"><a href="#">个性定制</a></li>
+                <li><a href="#">什么是个性定制</a></li>
+                <li><a href="#">如何个性定制</a></li>
+            </ul>
+        </div>
+        <div class="array_in">
+            <ul>
+                <li class="title"><a href="#">生产定制</a></li>
+                <li><a href="#">礼品制作周期表</a></li>
+                <li><a href="#">礼品保养须知</a></li>
+            </ul>
+        </div>
+        <div class="array_in">
+            <ul>
+                <li class="title"><a href="#">支付配送</a></li>
+                <li><a href="#">卡当网优惠券使用须知</a></li>
+                <li><a href="#">如何购买</a></li>
+                <li><a href="#">支付有哪些方式</a></li>
+            </ul>
+        </div>
+        <div class="array_in">
+            <ul>
+                <li class="title"><a href="#">售后中心</a></li>
+                <li><a href="#">礼品售后服务</a></li>
+            </ul>
+        </div>
+        <div class="array_in">
+            <ul>
+                <li class="title"><a href="#">客服中心</a></li>
+                <li><a href="#">用户协议</a></li>
+                <li><a href="#">客服介绍</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--end sever-->
+    <ul class="footer_link">
+        <li><a href="#" title="">关于我们</a></li>
+        <li><a href="#" title="">联系我们</a></li>
+        <li><a href="#" title="">合作联盟</a></li>
+        <li><a href="#" title="">网站地图</a></li>
+        <li><a href="#" title="">友情链接</a></li>
+    </ul>
+    <div class="copyright">
+        <p>Copyright © 2008 - 2010 <a href="#" class="a_1">aimakee.com</a> . All Rights Reserved</p>
+        <p>Powered by <a href="#" class="a_2">DODI</a></p>
+    </div>
+</div>
+</div>
+</body>
+</html>

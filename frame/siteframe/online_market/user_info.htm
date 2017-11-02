@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="css/common.css" />
+<link type="text/css" rel="stylesheet" href="css/user.css" />
+<script type="text/javascript" src="js/common.js"></script>
+<title>爱玛克登录页</title>
+</head>
+<body onload="margin_top_height();">
+<div id="wrap">
+<div class="header">
+    <ul id="QuickMenu">
+        <li class="my_account"><a href="#">Gordon</a><span>你好,欢迎光临爱玛客！</span></li>
+        <li class="my_icon" onmouseover="view_account()"><a href="user.htm">我的爱玛客<span id="my_icon"></span></a></li>
+        <li class=""><a href="flow_cart.htm">购物车</a></li>
+        <li class=""><a href="#">网站联盟</a></li>
+        <li class="map"><a href="#">网站地图</a></li>
+    </ul>
+    <ul id="my_account" class="my_account2" onmouseover="view_account()" onmouseout="hide_account()">
+        <li class="my_icon"><a href="user.htm">我的爱玛客</a><span></span></li> 
+        <li><a href="user_order.htm">我的订单</a></li>
+        <li><a href="user_credit.htm">我的积分</a></li>
+        <li><a href="#">我的优惠券</a></li> 
+        <li><a href="#">快递查询</a></li>         
+    </ul>       
+    <div id="logo">
+        <div class="logo"><a href="/" title="首页"><img src="images/logo.jpg" alt="北鼎首页" width="224" height="35" /></a></div>
+        <div class="contact_phone"><img src="images/contact_phone.jpg" alt="北鼎首页" width="233" height="17" /></div>
+    </div>
+    <div id="nav">
+        <ul class="mian_nav">
+            <li class="nav_index"><a href="index.htm" title="">首页</a></li>
+            <li class=""><a href="product_custom.htm" title="">个性定制</a></li>
+            <li class=""><a href="product.htm" title="">产品类目</a></li>
+        </ul>
+        <ul class="sub_nav">
+            <li class=""><a href="#" title="">对象定制</a></li>
+            <li class=""><a href="#" title="">新品区</a></li>
+            <li class=""><a href="#" title="">特价区</a></li>
+        </ul>
+    </div>
+</div>
+<div id="search">
+    <div class="search_con">
+        <div id="menu" class="menu2">
+            <div id="product_class" onmouseout="menu_style2(1)" onmouseover="menu_style2(2)">
+                <div class="product_class_txt">所有的个性产品<span id="icon1" class="icon_1"></span></div>
+            </div>
+        </div>
+        <ul id="menu_ul" class="hide"  onmouseout="menu_style2(1)" onmouseover="menu_style2(2)">
+        	<li id="foucs1" onmouseover="view_menu(1)" onmouseout="hide_menu(1)" >
+            	<div><a href="#">杯子影像<b class="a_icon1"></b></a><span>白瓷杯 变色杯</span></div>
+                <ul>
+                	<li class="one"><a href="#">变色杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">陶瓷杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">运动水壶<b class="a_icon2"></b></a></li>
+                </ul>
+            </li>
+        	<li id="foucs2" onmouseover="view_menu(2)" onmouseout="hide_menu(2)" >
+            	<div><a href="#">杯子影像<b class="a_icon1"></b></a><span>白瓷杯 变色杯</span></div>
+                <ul>
+                	<li class="one"><a href="#">变色杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">陶瓷杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">运动水壶<b class="a_icon2"></b></a></li>
+                </ul>
+            </li>
+        	<li id="foucs3" onmouseover="view_menu(3)" onmouseout="hide_menu(3)" >
+            	<div><a href="#">杯子影像<b class="a_icon1"></b></a><span>白瓷杯 变色杯</span></div>
+                <ul>
+                	<li class="one"><a href="#">变色杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">陶瓷杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">运动水壶<b class="a_icon2"></b></a></li>
+                </ul>
+            </li>
+        	<li id="foucs4" onmouseover="view_menu(4)" onmouseout="hide_menu(4)" >
+            	<div><a href="#">杯子影像<b class="a_icon1"></b></a><span>白瓷杯 变色杯</span></div>
+                <ul>
+                	<li class="one"><a href="#">变色杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">陶瓷杯<b class="a_icon2"></b></a></li>
+                    <li><a href="#">运动水壶<b class="a_icon2"></b></a></li>
+                </ul>
+            </li>            
+        </ul>
+        <div class="search_form">
+            <form method="post" action="">
+                <div class="search_txt"><input type="text" value="" name="" /></div>
+                <div class="search_sub"><input type="submit" value="" name="" /></div>
+            </form>
+        </div>
+        <ul class="search_keywords">
+            <li><a href="#" title="">关键字</a></li>
+            <li><a href="#" title="">关键字</a></li>
+            <li><a href="#" title="">关键字</a></li>
+        </ul>
+    </div>
+</div>
+<div class="main">
+    <div class="location"><span class="icon"></span>你现在的位置：<a href="#">爱玛克</a>&gt;<a class="current_a" href="#">登录</a> </div>
+ 	<div class="user_content">
+ 		<div class="con_left">
+            <div class="pad_border">
+                <ul class="user_menu">
+                    <li class="user_icon1"><a href="user.htm">欢迎页</a></li>
+                    <li class="user_icon2"><a href="user_order.htm">我的订单</a></li>
+                    <li class="user_icon3"><a href="user_credit.htm">我的积分</a></li>
+                    <li class="user_icon4"><a href="user_address.htm">地址薄</a></li>
+                    <li class="user_icon5"><a class="hot" href="user_info.htm">基本信息</a></li>
+                    <li class="user_icon6"><a href="user_album.htm">我的图库</a></li>
+                    <li class="user_icon7"><a href="user_recommend.htm">我的推荐</a></li>
+                    <li class="user_icon8"><a href="user_comment.htm">我的评论</a></li>
+                    <li class="user_icon9"><a href="user_message.htm">留言管理</a></li>
+                </ul>
+                <div class="user_logout"><a href="#" title="退出"><img src="images/user_btn1.jpg" alt="退出" /></a></div>
+            </div>
+        </div>
+ 		<div class="con_right">
+        	<div class="pad_border">
+            	<div class="user_con">
+                	<div class="subject"><span>基本信息</span></div>
+                    <form action="flow.php" method="post" name="theForm" id="theForm" onsubmit="return checkConsignee(this)">
+                        <table width="98%" align="center"> 
+                            <tr>
+                                <td class="align_right">出生日期： </td>
+                                <td class="align_left"><select name="birthdayYear"><option value="1950">1950</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option></select>&nbsp;<select name="birthdayMonth"><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>&nbsp;<select name="birthdayDay"><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select> </td>
+                            </tr>
+                            <tr>
+                              <td class="align_right">性　别：</td>
+                                <td class="align_left">
+                                    <span><input type="radio" name="sex" value="0" checked="checked"/>保密</span>
+                                    <span><input type="radio" name="sex" value="1"/>男</span>
+                                    <span><input type="radio" name="sex" value="2"/>女</span>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td class="align_right">电子邮件地址：</td>
+                                <td valign="middle" class="align_left"><input name="email" type="text" value="ybbqg@1d26.com" size="25" class="inputBg" /><span> *</span></td>
+                            </tr>	
+                            <tr>
+                              <td class="align_right">MSN：</td>
+                                <td valign="middle" class="align_left"><input name="email" type="text" value="ybbqg@126.com" class="inputBg" /><span> *</span></td>
+                            </tr>
+                            <tr>
+                              <td class="align_right">QQ：</td>
+                                <td valign="middle" class="align_left"><input name="email" type="text" value="396308916" class="inputBg" /><span> *</span></td>
+                            </tr>
+                            <tr>
+                              <td class="align_right">办公电话：</td>
+                                <td valign="middle" class="align_left"><input name="email" type="text" value="8630588" class="inputBg" /><span> *</span></td>
+                            </tr>
+                            <tr>
+                              <td class="align_right">家庭电话：</td>
+                                <td valign="middle" class="align_left"><input name="email" type="text" value="0734-5584127" class="inputBg" /><span> *</span></td>
+                            </tr>
+                            <tr>
+                              <td class="align_right">手机：</td>
+                                <td valign="middle" class="align_left"><input name="email" type="text" value="13432043434" class="inputBg" /><span> *</span></td>
+                            </tr>
+                            <tr>
+                              <td class="align_right">密码提示问题：</td>
+                                <td valign="middle" class="align_left">
+                                    <select name='sel_question' class="select2">
+                                        <option value='0'>请选择密码提示问题</option>
+                                        <option value="friend_birthday" selected>我最好朋友的生日？</option>
+                                        <option value="old_address">我儿时居住地的地址？</option>
+                                        <option value="motto">我的座右铭是？</option>
+                                        <option value="favorite_movie">我最喜爱的电影？</option>
+                                        <option value="favorite_song">我最喜爱的歌曲？</option>
+                                        <option value="favorite_food">我最喜爱的食物？</option>
+                                        <option value="interest">我最大的爱好？</option>
+                                        <option value="favorite_novel">我最喜欢的小说？</option>
+                                        <option value="favorite_equipe">我最喜欢的运动队？</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td class="align_right">密码问题答案：</td>
+                                <td class="align_left">
+                                    <input name="email" type="text" value="就是我" size="25" class="inputBg" /><span> *</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="td_center">
+                                    <input name="act" type="hidden" value="act_edit_profile" />
+                                    <input name="submit" type="submit" value="确认修改" />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <form name="formPassword" action="user.php" method="post" onSubmit="">
+                        <table width="98%" align="center">
+                            <tr>
+                                <td width="32%" class="align_right">原密码：</td>
+                                <td class="align_left"><input name="old_password" type="password" size="24"  class="inputBg" /></td>
+                            </tr>
+                            <tr>
+                                <td class="align_right">新密码：</td>
+                                <td class="align_left"><input name="new_password" type="password" size="24"  class="inputBg" /></td>
+                            </tr>
+                            <tr>
+                                <td class="align_right">确认密码：</td>
+                                <td class="align_left"><input name="comfirm_password" type="password" size="24"  class="inputBg" /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="td_center td_center1"><input name="act" type="hidden" value="act_edit_password" />
+                                    <input name="submit" type="submit"  value="确认修改" />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+<div class="footer">
+    <div class="sever">
+        <div class="array_in">
+            <ul>
+                <li class="title"><a href="#">常见问题</a></li>
+                <li><a href="#">怎样在线支付？</a></li>
+                <li><a href="#">产品有问题如何退货？ </a></li>
+                <li><a href="#">送货范围及资费标准</a></li>
+            </ul>
+        </div>
+        <div class="array_in">
+            <ul>
+                <li class="title"><a href="#">个性定制</a></li>
+                <li><a href="#">什么是个性定制</a></li>
+                <li><a href="#">如何个性定制</a></li>
+            </ul>
+        </div>
+        <div class="array_in">
+            <ul>
+                <li class="title"><a href="#">生产定制</a></li>
+                <li><a href="#">礼品制作周期表</a></li>
+                <li><a href="#">礼品保养须知</a></li>
+            </ul>
+        </div>
+        <div class="array_in">
+            <ul>
+                <li class="title"><a href="#">支付配送</a></li>
+                <li><a href="#">卡当网优惠券使用须知</a></li>
+                <li><a href="#">如何购买</a></li>
+                <li><a href="#">支付有哪些方式</a></li>
+            </ul>
+        </div>
+        <div class="array_in">
+            <ul>
+                <li class="title"><a href="#">售后中心</a></li>
+                <li><a href="#">礼品售后服务</a></li>
+            </ul>
+        </div>
+        <div class="array_in">
+            <ul>
+                <li class="title"><a href="#">客服中心</a></li>
+                <li><a href="#">用户协议</a></li>
+                <li><a href="#">客服介绍</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--end sever-->
+    <ul class="footer_link">
+        <li><a href="#" title="">关于我们</a></li>
+        <li><a href="#" title="">联系我们</a></li>
+        <li><a href="#" title="">合作联盟</a></li>
+        <li><a href="#" title="">网站地图</a></li>
+        <li><a href="#" title="">友情链接</a></li>
+    </ul>
+    <div class="copyright">
+        <p>Copyright © 2008 - 2010 <a href="#" class="a_1">aimakee.com</a> . All Rights Reserved</p>
+        <p>Powered by <a href="#" class="a_2">DODI</a></p>
+    </div>
+</div>
+</div>
+</body>
+</html>
