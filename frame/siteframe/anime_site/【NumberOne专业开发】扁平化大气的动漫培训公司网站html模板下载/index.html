@@ -1,0 +1,507 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>奇恩动漫</title>
+<link rel="stylesheet" type="text/css" href="pic/style.css" />
+<script type="text/javascript" src="pic/jquery1.42.min.js"></script>
+<script type="text/javascript" src="pic/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+<div id="header">
+	<div class="header">
+		<div class="logo">
+			<h1><a href="#"><img src="pic/logo.png" width="367" height="120"></a></h1>
+		</div>
+		
+		<div class="logor">
+			<img src="pic/logor.png" width="262" height="120">
+		</div>
+	</div>
+</div>
+
+<div id="menu">
+	<div class="menu">
+		<ul id="nav" class="nav clearfix">
+			<li class="nLi color1">
+				<h3><a href="#" target="_blank">首页</a></h3>
+			</li>
+			<li class="nLi color7">
+					<h3><a href="#" target="_blank">关于奇恩</a></h3>
+					<ul class="sub">
+						<li><a href="#">公司介绍</a></li>
+						<li><a href="#">三大业务</a></li>
+						<li><a href="#">最新资讯</a></li>
+						<li><a href="#">合作伙伴</a></li>
+						<li><a href="#">公司环境</a></li>
+					</ul>
+			</li>
+			<li class="nLi color2">
+			<!-- 假设当前频道为“预告片”，手动或后台程序添加titOnClassName类名（默认是'on'），相当于设置参数defaultIndex:1。若同时设置参数returnDefault:true，则鼠标移走后0.3秒返回当前频道 -->
+					<h3><a href="#" target="_blank">师资团队</a></h3>
+					<ul class="sub">
+						<li><a href="#">个人简介</a></li>
+						<li><a href="#">老师作品</a></li>
+						<li><a href="#">教学经验</a></li>
+					</ul>
+			</li>
+			<li class="nLi color3">
+					<h3><a href="#" target="_blank">课程设置</a></h3>
+					<ul class="sub">
+						<li><a href="#">动漫课程</a></li>
+						<li><a href="#">动漫课程</a></li>
+						<li><a href="#">动漫课程</a></li>
+						<li><a href="#">动漫课程</a></li>
+					</ul>
+			</li>
+			<li class="nLi color4">
+					<h3><a href="#" target="_blank">就业资讯</a></h3>
+					<ul class="sub">
+						<li><a href="#">就业明显</a></li>
+						<li><a href="#">就业服务</a></li>
+						<li><a href="#">面试简历</a></li>
+						<li><a href="#">企业招聘</a></li>
+					</ul>
+			</li>
+			<li class="nLi color5">
+					<h3><a href="#" target="_blank">学员天地</a></h3>
+					<ul class="sub">
+						<li><a href="#">学生作品</a></li>
+						<li><a href="#">学习动态</a></li>
+						<li><a href="#">学生活动</a></li>
+					</ul>
+			</li>
+			<li class="nLi color6">
+					<h3><a href="#" target="_blank">在线报名</a></h3>
+					<ul class="sub">
+						<li><a href="#">快捷咨询</a></li>
+						<li><a href="#">在线留言</a></li>
+					</ul>
+			</li>
+			<li class="nLi color2">
+					<h3><a href="#" target="_blank">联系我们</a></h3>
+					<ul class="sub">
+						<li><a href="#">联系地址</a></li>
+						<li><a href="#">联系电话</a></li>
+					</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<script id="jsID" type="text/javascript">
+			
+			jQuery("#nav").slide({ 
+				type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+				titCell:".nLi", //鼠标触发对象
+				targetCell:".sub", //titCell里面包含的要显示/消失的对象
+				effect:"slideDown", //targetCell下拉效果
+				delayTime:300 , //效果时间
+				triggerTime:0, //鼠标延迟触发时间（默认150）
+				returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+			});
+</script>
+
+
+		<div id="slideBox" class="slideBox">
+			<div class="bd">
+				<ul>
+					<li style="background:url(pic/1.jpg) no-repeat 50% 0;"><a href="#" target="_blank"></a></li>
+					<li style="background:url(pic/2.jpg) no-repeat 50% 0;"><a href="#" target="_blank"></a></li>
+				</ul>
+			</div>
+
+			<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+			<a class="prev" href="javascript:void(0)"></a>
+			<a class="next" href="javascript:void(0)"></a>
+
+		</div>
+
+		<script type="text/javascript">
+		jQuery(".slideBox").slide({mainCell:".bd ul",effect:"fold",autoPlay:true});
+		</script>
+		
+<div class="clear"></div>
+<div id="yewu">
+	<div class="ititle">奇恩动漫三大业务</div>
+	
+	<div class="yewu">
+		<a class="yewu1" href="#">
+			<div class="yewuimg"><img src="pic/yewu.png" width="63" height="63"></div>
+			<div class="yewup">
+				<p class="yewup1">制作业务</p>
+				<p class="yewup2">致力于开发和制作高品质动画项目，拥有LAVA（臭屁虫）、PUCCA（中国娃娃）、FRANKY&FRIENDS、等，众多著名动画IP项目授权。</p>
+			</div>
+		</a>
+		<a class="yewu2" href="#">
+			<div class="yewuimg"><img src="pic/yewu.png" width="63" height="63"></div>
+			<div class="yewup">
+				<p class="yewup1">制作业务</p>
+				<p class="yewup2">致力于开发和制作高品质动画项目，拥有LAVA（臭屁虫）、PUCCA（中国娃娃）、FRANKY&FRIENDS、等，众多著名动画IP项目授权。</p>
+			</div>
+		</a>
+		<a class="yewu3" href="#">
+			<div class="yewuimg"><img src="pic/yewu.png" width="63" height="63"></div>
+			<div class="yewup">
+				<p class="yewup1">制作业务</p>
+				<p class="yewup2">致力于开发和制作高品质动画项目，拥有LAVA（臭屁虫）、PUCCA（中国娃娃）、FRANKY&FRIENDS、等，众多著名动画IP项目授权。</p>
+			</div>
+		</a>
+	</div>			 
+</div>
+<div class="clear"></div>
+
+<div id="news">
+	<div class="news">
+		<div class="ititle2"><p>新闻资讯</p></div>
+		<div class="border-box">
+			<div class="border-box1">
+			<a href="#" target="_blank">
+			<div class="divimg"><img src="pic/news.jpg"></div>
+			<h3>“融汇深圳设计·服务中国创造”深圳市商业美术设计促进会</h3>
+			</a>
+			</div>
+			<div class="border-box2">
+			<a href="#" target="_blank">
+			<div class="divimg"><img src="pic/news.jpg"></div>
+			<h3>“融汇深圳设计·服务中国创造”深圳市商业美术设计促进会</h3>
+			</a>
+			</div>
+		</div>
+		<ul class="newsli">
+		<li><a href="#" target="_blank">中鹏服装设计培训中心精英老师系列人物访谈之“做最好的职业教育”</a></li>
+		<li><a href="#" target="_blank">热烈祝贺中鹏培训2015年11月采购师与物流师考试通过率再创新高！</a></li>
+		<li><a href="#" target="_blank">热烈欢迎评估专家组到深圳市宝安区中鹏职业培训中心进行评估工作</a></li>
+		<li><a href="#" target="_blank"> 热烈祝贺中鹏培训参评“全国职工教育培训先进集体”初审通过</a></li>
+		</ul>
+	</div>
+	<div class="jishu">
+		<div class="ititle2"><p>技术分享</p></div>
+		<div class="border-box">
+			<div class="border-box1">
+			<a href="#" target="_blank">
+			<div class="divimg"><img src="pic/news.jpg"></div>
+			<h3>“融汇深圳设计·服务中国创造”深圳市商业美术设计促进会</h3>
+			</a>
+			</div>
+			<div class="border-box2">
+			<a href="#" target="_blank">
+			<div class="divimg"><img src="pic/news.jpg"></div>
+			<h3>“融汇深圳设计·服务中国创造”深圳市商业美术设计促进会</h3>
+			</a>
+			</div>
+		</div>
+		<ul class="newsli">
+		<li><a href="#" target="_blank">中鹏服装设计培训中心精英老师系列人物访谈之“做最好的职业教育”</a></li>
+		<li><a href="#" target="_blank">热烈祝贺中鹏培训2015年11月采购师与物流师考试通过率再创新高！</a></li>
+		<li><a href="#" target="_blank">热烈欢迎评估专家组到深圳市宝安区中鹏职业培训中心进行评估工作</a></li>
+		<li><a href="#" target="_blank"> 热烈祝贺中鹏培训参评“全国职工教育培训先进集体”初审通过</a></li>
+		</ul>
+	</div>
+</div>	
+
+<div id="kecheng">
+	<div class="ititle">精品课程</div>
+	<div class="kecheng">
+		<div class="kechengl">
+			<ul>
+				<li><a href="#">影视动画全科班</a></li>
+				<li><a href="#">影视动画全科班</a></li>
+				<li><a href="#">影视动画全科班</a></li>
+				<li><a href="#">影视动画全科班</a></li>
+				<li><a href="#">影视动画全科班</a></li>
+				<li><a href="#">影视动画全科班</a></li>
+			</ul>
+		</div>
+		
+		<div class="kechengr">
+		
+		<div class="multipleColumn">
+		<div class="hd">
+				<a class="next"></a>
+				<a class="prev"></a>
+			</div>
+			<div class="bd">
+
+				<div class="ulWrap">
+
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="pic/s1.jpg" /></a></div>
+							</li>
+						</ul>
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="pic/s2.jpg" /></a></div>
+							</li>
+						</ul>
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="pic/s3.jpg" /></a></div>
+							</li>
+						</ul>
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="pic/s1.jpg" /></a></div>
+							</li>
+						</ul>
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="pic/s2.jpg" /></a></div>
+							</li>
+						</ul>
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="pic/s3.jpg" /></a></div>
+							</li>
+						</ul>
+
+				</div><!-- ulWrap End -->
+			</div><!-- bd End -->
+		</div><!-- multipleColumn End -->		
+		
+		
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+jQuery(".multipleColumn").slide({titCell:".hd ul",mainCell:".bd .ulWrap",autoPage:true,effect:"leftLoop",autoPlay:true,vis:3});
+</script>
+
+<div class="clear"></div>	
+<div id="shizi">
+	<div class="ititle">超强师资团队</div>
+	<div class="shizi">
+	
+		<div class="multipleColumn2">
+		<div class="hd">
+				<a class="next"></a>
+				<a class="prev"></a>
+			</div>
+			<div class="bd">
+
+				<div class="ulWrap2">
+
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="pic/shizi.jpg" /></a></div>
+								<div class="title"><a href="#" target="_blank">张依沱<br>maya影视动画讲师</a></div>
+								<div class="text">供职于环球数码、奥飞等国内知名动漫公司，参与制作过《大圣归来》、《maya the bee》《超级飞侠》《寂静岭》等大型动画项目</div>
+							</li>
+						</ul>
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="pic/shizi.jpg" /></a></div>
+								<div class="title"><a href="#" target="_blank">张依沱<br>maya影视动画讲师</a></div>
+								<div class="text">供职于环球数码、奥飞等国内知名动漫公司，参与制作过《大圣归来》、《maya the bee》《超级飞侠》《寂静岭》等大型动画项目</div>
+							</li>
+						</ul>
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="pic/shizi.jpg" /></a></div>
+								<div class="title"><a href="#" target="_blank">张依沱<br>maya影视动画讲师</a></div>
+								<div class="text">供职于环球数码、奥飞等国内知名动漫公司，参与制作过《大圣归来》、《maya the bee》《超级飞侠》《寂静岭》等大型动画项目</div>
+							</li>
+						</ul>
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="pic/shizi.jpg" /></a></div>
+								<div class="title"><a href="#" target="_blank">张依沱<br>maya影视动画讲师</a></div>
+								<div class="text">供职于环球数码、奥飞等国内知名动漫公司，参与制作过《大圣归来》、《maya the bee》《超级飞侠》《寂静岭》等大型动画项目</div>
+							</li>
+						</ul>
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="pic/shizi.jpg" /></a></div>
+								<div class="title"><a href="#" target="_blank">张依沱<br>maya影视动画讲师</a></div>
+								<div class="text">供职于环球数码、奥飞等国内知名动漫公司，参与制作过《大圣归来》、《maya the bee》《超级飞侠》《寂静岭》等大型动画项目</div>
+							</li>
+						</ul>
+						<ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+							<li>
+								<div class="pic"><a href="#" target="_blank"><img src="pic/shizi.jpg" /></a></div>
+								<div class="title"><a href="#" target="_blank">张依沱<br>maya影视动画讲师</a></div>
+								<div class="text">供职于环球数码、奥飞等国内知名动漫公司，参与制作过《大圣归来》、《maya the bee》《超级飞侠》《寂静岭》等大型动画项目</div>
+							</li>
+						</ul>
+
+				</div><!-- ulWrap End -->
+			</div><!-- bd End -->
+		</div><!-- multipleColumn End -->	
+	
+	</div>
+</div>
+
+<script type="text/javascript">
+jQuery(".multipleColumn2").slide({titCell:".hd ul",mainCell:".bd .ulWrap2",autoPage:true,effect:"leftLoop",autoPlay:true,vis:4});
+</script>
+<div class="clear"></div>
+
+<div id="youshi">
+</div>
+
+
+<div class="clear"></div>
+<div id="xiangmu">
+	<div class="ititle">项目展示</div>
+	<div class="xiangmu">
+		<div class="xiangmu1">
+			<div class="xiangmut">
+				<p class="p1">发布时间：2015-12-30</p>
+				<p class="p2">这里是项目的作品标题标题名称示范</p>
+				<p class="p3">这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介。</p>
+			</div>
+			<div class="xiangmup">
+				<img src="pic/b1.jpg" width="684" height="343">
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="xiangmu2">
+			<div class="xiangmut">
+				<p class="p1">发布时间：2015-12-30</p>
+				<p class="p2">这里是项目的作品标题标题名称示范</p>
+				<p class="p3">这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介。</p>
+			</div>
+			<div class="xiangmup">
+				<img src="pic/b2.jpg" width="684" height="343">
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="xiangmu3">
+			<div class="xiangmut">
+				<p class="p1">发布时间：2015-12-30</p>
+				<p class="p2">这里是项目的作品标题标题名称示范</p>
+				<p class="p3">这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介，这里是作品简介。</p>
+			</div>
+			<div class="xiangmup">
+				<img src="pic/b3.jpg" width="684" height="343">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+<div id="hezuo">
+	<div class="ititle">部分合作企业需求</div>	
+	<div class="hezuo">
+		<img src="pic/hezuo1.jpg" width="1000" height="224">
+		<img src="pic/hezuo2.jpg" width="1000" height="288">
+		<img src="pic/hezuo3.jpg" width="1000" height="151">
+	</div>
+</div>
+
+<div class="clear"></div>
+<div id="mengxiang">
+	<div class="mengxiang">	
+		<p class="p1">动漫梦想，始于奇恩！</p>
+		<p class="p2">与其碌碌无为，不如现在行动，加入奇恩动漫学习计划，改写自己的职场命运！</p>
+		<div class="p3"><a href="#"><img src="pic/mengxiang.png" width="139" height="54"></a></div>
+	</div>
+</div>
+
+
+<div class="clear"></div>
+<div id="footer">
+<div class="footer">
+	<div class="Top-List">
+		<dl class="list-box">
+			<dt>常见问题</dt>
+			<dd><a target="_blank" href="#m=guestbook&amp;c=qq&amp;a=init">零基础学设计能学会？</a></dd>
+			<dd><a target="_blank" href="#m=guestbook&amp;c=qq&amp;a=init">老师教得好不好？</a></dd>
+			<dd><a target="_blank" href="#m=guestbook&amp;c=qq&amp;a=init">上课时间怎么安排？</a></dd>
+			<dd><a target="_blank" href="#m=guestbook&amp;c=qq&amp;a=init">天琥怎么推荐就业？</a></dd>
+			<dd><a target="_blank" href="#m=guestbook&amp;c=qq&amp;a=init">最近有没有优惠？</a></dd>
+			<dd><a target="_blank" href="#m=guestbook&amp;c=qq&amp;a=init">重修的条件是什么？</a></dd>
+			
+		</dl>
+		<dl class="list-box">
+			<dt>核心课程</dt>
+			<dd><a target="_blank" href="#105-1.html">电商设计运营班</a></dd>
+			<dd><a target="_blank" href="#41-1.html">UI实战就业班</a></dd>
+			<dd><a target="_blank" href="#44-1.html">室内空间创意班</a></dd>
+			<dd><a target="_blank" href="#38-1.html">平面视觉创意班</a></dd>
+			<dd><a target="_blank" href="#97-1.html">PhotoShop全能特训班</a></dd>
+			<dd><a target="_blank" href="#98-1.html">CAD设计制图考证班</a></dd>
+		</dl>
+		<dl class="list-box">
+			<dt>成功案例</dt>
+			<dd><a target="_blank" href="#16-1.html">就业明星</a></dd>
+			<dd><a target="_blank" href="#19-1.html">励志学员</a></dd>
+			<dd><a target="_blank" href="#18-1.html">零基础学员</a></dd>
+			<dd><a target="_blank" href="#17-1.html">中标明星</a></dd>
+		</dl>
+		<div class="last-box">
+			<dl style="width: 100%;" class="list-box">
+				<dt>联系我们</dt>
+				<dd><a target="_blank" href="#48-1.html">全国连锁分校</a></dd>
+				<dd><a target="_blank" href="#m=guestbook&amp;c=qq&amp;a=init">您问我们来答</a></dd>
+			</dl>
+			<div class="clear"></div>
+			<div class="callphone">
+				<span class="smalltit">咨询热线:</span>
+				<p>400-000-0000</p>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="Bot-List">
+		<div class="mid">
+			<div class="fl">
+				<dl class="dl-list">
+					<dt>友情链接：</dt>
+					 <dd><a target="_blank" href="http://www.xtyunke.com/">厚学网</a></dd>
+                    <dd><a target="_blank" href="http://www.xtyunke.com/">教育联展网</a></dd>
+                    <dd><a target="_blank" href="http://www.xtyunke.com/">勤学教育</a></dd>
+                    <dd><a target="_blank" href="http://www.xtyunke.com/">搜课网</a></dd>
+                    <dd><a target="_blank" href="http://www.xtyunke.com/">广州培训通</a></dd>
+                    <dd><a target="_blank" href="http://www.xtyunke.com/">广州厚学培训</a></dd>
+                    <dd><a target="_blank" href="http://www.xtyunke.com/">会计学习网</a></dd>
+                    <dd><a target="_blank" href="http://www.xtyunke.com/">素材下载</a></dd>
+                    <dd><a target="_blank" href="http://www.xtyunke.com/">恒企教育</a></dd>
+					<dd><a target="_blank" href="http://www.xtyunke.com/">网站建设</a></dd>
+					<!-- <dd><a href="#m=tag&c=lgpf" target="_blank">logo测评</a></dd> -->					
+				</dl>
+				<dl class="dl-list">
+					<dt>关键词：</dt>
+											
+						<dd><a target="_blank" href="#97-1.html">PhotoShop学习</a></dd>
+						
+						<dd><a target="_blank" href="#43-1.html">网页设计需要学什么</a></dd>
+						
+						<dd><a target="_blank" href="#41-1.html">Web界面设计</a></dd>
+						
+						<dd><a target="_blank" href="#105-1.html">电商培训班</a></dd>
+						
+						<dd><a target="_blank" href="#43-1.html">网页设计培训机构</a></dd>
+						
+						<dd><a target="_blank" href="#m=guestbook&amp;c=qq&amp;a=init">培训班多少钱</a></dd>
+						
+				</dl>
+			</div>
+			<div class="fr">
+				<div class="codeimg">
+					<p>微网二维码</p>
+					<img alt="" src="http://img.tianhujy.com/pc/statics/css/newmain/newindex/2015112611.jpg">
+				</div>
+				<div class="codeimg">
+					<p>官方微信</p>
+					<img alt="" src="http://img.tianhujy.com/pc/statics/css/newmain/newindex/2015112612.jpg">
+				</div>
+				<div class="codeimg">
+					<p>设计改稿答疑</p>
+					<img alt="" src="http://img.tianhujy.com/pc/statics/css/newmain/newindex/2015112613.jpg">
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+</div>
+
+	<div class="copy-right">
+		<p><span style="color:#ed6d00">奇恩动漫</span> Copyright &copy;2015 ALL Rights Reserved 备案号：粤ICP备15020078号-1 建议使用1280X768以上分辨率浏览本站</p>
+	</div>
+
+		
+</body>
+</html>
